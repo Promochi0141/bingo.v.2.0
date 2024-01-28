@@ -12,5 +12,13 @@ class Number extends Model
     protected $fillable = [
         'id',
         'status',
+        'created_at',
+        'updated_at',
     ];
+
+    public function toggleStatus()
+    {
+        $this->status = !$this->status;
+        return $this->save();
+    }
 }

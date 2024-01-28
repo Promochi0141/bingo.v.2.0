@@ -13,4 +13,12 @@ class NumberAdminController extends Controller
         $data = Number::all(['id', 'status']);
         return response()->json($data);
     }
+
+    public function toggle($id)
+    {
+        $number = Number::findOrFail($id);
+        $number->toggleStatus();
+
+        return response()->json($number);
+    }
 }

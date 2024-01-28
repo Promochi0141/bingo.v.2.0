@@ -19,4 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/api/numbers', [NumberAdminController::class, 'index']);
+Route::get('/numbers', [NumberAdminController::class, 'index']);
+
+Route::post('/numbers/toggle/{id}', [NumberAdminController::class, 'toggle']);

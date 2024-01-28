@@ -9,9 +9,9 @@ export default function Admin({ children }) {
                         ビンゴ管理画面
                     </h1>
                     <div>
-                        <Link to="/path1" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">番号管理</Link>
-                        <Link to="/path2" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">景品管理</Link>
-                        <Link to="/path3" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">お知らせ管理</Link>
+                        <Link to="/numbers" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">番号管理</Link>
+                        <Link to="/numbers" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">景品管理</Link>
+                        <Link to="/numbers" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">お知らせ管理</Link>
                     </div>
                 </div>
             </header>
