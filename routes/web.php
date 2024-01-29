@@ -36,13 +36,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/numbers', function () {
-    return Inertia::render('Admin/Base');
-});
-
-Route::get('/gifts', function () {
-    return Inertia::render('Admin/GiftAdmin');
-});
+Route::get('/admin', function () {
+    return Inertia::render('Admin/App');
+})->middleware(['auth', 'verified'])->name('admin');
 
 
 require __DIR__.'/auth.php';

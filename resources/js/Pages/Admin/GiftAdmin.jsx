@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import AdminLeyout from '@/Layouts/AdminLayout';
 
 function GiftAdmin({ gifts }) {
     const [editedGifts, setEditedGifts] = useState([]);
@@ -56,37 +55,37 @@ function GiftAdmin({ gifts }) {
 
     return (
         <React.Fragment>
-            <AdminLeyout children={
-                <React.Fragment>
-                    <button onClick={handleCreate}>新規作成</button>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Changed Name</th>
-                                <th>Confirm</th>
-                                <th>Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {editedGifts.map((gift) => (
-                                <tr key={gift.id}>
-                                    <td>{gift.name}</td>
-                                    <td>
-                                        <input type="text" onChange={e => setNewName(e.target.value)} />
-                                    </td>
-                                    <td>
-                                        <button onClick={() => handleEdit(gift.id, newName)}>Confirm</button>
-                                    </td>
-                                    <td>
-                                        <button onClick={() => handleDelete(gift.id)}>Delete</button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </React.Fragment>
-            } />
+            <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                    <tr>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Changed Name</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Confirm</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Delete</th>
+                    </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                    {editedGifts.map((gift) => (
+                        <tr key={gift.id} className='bg-gray-200'>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{gift.name}</td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                <input type="text" onChange={e => setNewName(e.target.value)} />
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                <button onClick={() => handleEdit(gift.id, newName)} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">変更確定</button>
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                <button onClick={() => handleDelete(gift.id)} className="px-4 py-2 bg-red-600 text-white rounded hover:bg-blue-700">行削除</button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+            <div className="mx-8 my-2.5">
+                <button onClick={handleCreate} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    新規行を追加
+                </button>
+            </div>
         </React.Fragment>
     );
 }
