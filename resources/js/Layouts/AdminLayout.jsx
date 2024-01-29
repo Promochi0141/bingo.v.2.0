@@ -1,4 +1,4 @@
-import { Link } from '@inertiajs/inertia-react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 export default function Admin({ children }) {
     return (
@@ -8,11 +8,13 @@ export default function Admin({ children }) {
                     <h1 className="text-3xl font-bold text-gray-900">
                         ビンゴ管理画面
                     </h1>
-                    <div>
-                        <Link to="/numbers" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">番号管理</Link>
-                        <Link to="/numbers" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">景品管理</Link>
-                        <Link to="/numbers" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">お知らせ管理</Link>
-                    </div>
+                    <Router>
+                        <div>
+                            <Link to="/numbers" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">番号管理</Link>
+                            <Link to="/giftadmin" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">景品管理</Link>
+                            <Link to="/numbers" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">お知らせ管理</Link>
+                        </div>
+                    </Router>
                 </div>
             </header>
             <main>
