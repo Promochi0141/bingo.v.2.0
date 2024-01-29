@@ -24,6 +24,7 @@ Route::get('/numbers', [NumberAdminController::class, 'index']);
 
 Route::post('/numbers/toggle/{id}', [NumberAdminController::class, 'toggle']);
 
+Route::post('/gifts', [GiftAdminController::class, 'store']);
 Route::get('/gifts', [GiftAdminController::class, 'index']);
 Route::put('/gifts/{id}', [GiftAdminController::class, 'update']);
 Route::delete('/gifts/{id}', [GiftAdminController::class, 'delete']);

@@ -10,7 +10,6 @@ class Gift extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id',
         'name',
     ];
 }
