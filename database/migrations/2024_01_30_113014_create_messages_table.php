@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('gifts', function (Blueprint $table) {
+        Schema::create('messages', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
+            $table->text('contents',400)->nullable();
         });
     }
 
@@ -21,8 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('gifts', function (Blueprint $table) {
-            $table->dropTimestamps();
-        });
+        Schema::dropIfExists('messages');
     }
 };

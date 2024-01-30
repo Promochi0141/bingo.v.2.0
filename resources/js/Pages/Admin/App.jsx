@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import AdminBase from './Base';
 import GiftAdmin from './GiftAdmin';
+import MessageAdmin from './MessageAdmin';
 
 function App() {
     return (
@@ -16,12 +17,14 @@ function App() {
                             <div>
                                 <Link to="/numbers" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">番号管理</Link>
                                 <Link to="/giftadmin" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">景品管理</Link>
+                                <Link to="/messageadmin" className="mx-2 text-blue-500 hover:text-blue-700 hover:border-b-2 hover:border-gray-800">メッセージ管理</Link>
                             </div>
                             <main>
                                 <div className="">
                                     <Routes>
                                         <Route path="/numbers" element={<AdminBase />} />
                                         <Route path="/giftadmin" element={<GiftAdmin />} />
+                                        <Route path="/messageadmin" element={<MessageAdmin />} />
                                     </Routes>
                                 </div>
                             </main>

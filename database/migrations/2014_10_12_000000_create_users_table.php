@@ -20,6 +20,13 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        //管理用ユーザーを作成
+        DB::table('users')->insert([
+            'name' => 'your_name',
+            'email' => 'your_email@test.com',
+            'password' => Hash::make('your_password'),
+        ]);
     }
 
     /**

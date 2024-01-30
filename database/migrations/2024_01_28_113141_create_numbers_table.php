@@ -16,6 +16,13 @@ return new class extends Migration
             $table->boolean('status')->default(false);
             $table->timestamps();
         });
+
+        //idが1~75のレコードを作成
+        for ($i = 1; $i <= 75; $i++) {
+            DB::table('numbers')->insert([
+                'id' => $i,
+            ]);
+        }
     }
 
     /**
