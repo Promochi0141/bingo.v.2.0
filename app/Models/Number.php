@@ -23,4 +23,9 @@ class Number extends Model
         $this->touch();
         return $this->save();
     }
+
+    public function broadcastOn()
+    {
+    return new Channel('ShowNumbers');
+    }
 }

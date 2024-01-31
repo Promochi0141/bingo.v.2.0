@@ -55,6 +55,10 @@ services:
             - '${FORWARD_MAILPIT_DASHBOARD_PORT:-8025}:8025'
         networks:
             - sail
+    redis:
+        image: redis:latest
+        ports:
+            - '6379:6379'
 networks:
     sail:
         driver: bridge
