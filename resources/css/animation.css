@@ -1,0 +1,35 @@
+.item-enter {
+    opacity: 0;
+}
+
+.item-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.item-exit {
+    opacity: 1;
+}
+
+.item-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.rotate-enter {
+    transform: rotate(0deg);
+}
+
+.rotate-enter-active {
+    transform: rotate(360deg);
+    transition: transform 500ms;
+}
+
+.rotate-exit {
+    transform: rotate(360deg);
+}
+
+.rotate-exit-active {
+    transform: rotate(0deg);
+    transition: transform 500ms;
+}

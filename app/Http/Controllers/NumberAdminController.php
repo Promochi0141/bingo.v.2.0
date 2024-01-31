@@ -10,7 +10,7 @@ class NumberAdminController extends Controller
 {
     public function index()
     {
-        $data = Number::all(['id', 'status']);
+        $data = Number::all(['id', 'status','updated_at']);
         return response()->json($data);
     }
 

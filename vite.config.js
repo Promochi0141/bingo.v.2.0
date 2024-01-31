@@ -14,6 +14,8 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': path.resolve(__dirname, '/resources/js'),
+            // resources/css以下へのalias
+            '@css': path.resolve(__dirname, '/resources/css'),
         },
     },
 });
