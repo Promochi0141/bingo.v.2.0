@@ -17,14 +17,14 @@ use App\Http\Controllers\GiftAdminController;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -39,6 +39,10 @@ Route::middleware('auth')->group(function () {
 Route::get('/admin', function () {
     return Inertia::render('Admin/App');
 })->middleware(['auth', 'verified'])->name('admin');
+
+Route::get('/',function(){
+    return Inertia::render('Visitor/App');
+});
 
 
 require __DIR__.'/auth.php';

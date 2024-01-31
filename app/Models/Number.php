@@ -19,6 +19,8 @@ class Number extends Model
     public function toggleStatus()
     {
         $this->status = !$this->status;
+        // 'updated_at'に実行時の日時をセット
+        $this->touch();
         return $this->save();
     }
 }
