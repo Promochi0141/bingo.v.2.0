@@ -1,3 +1,5 @@
+# 開発段階、最小限、番号表示機能だけ付けれたから公開
+
 # 開発環境立ち上げ
 
 開発環境立ち上げ中、以下の記事のようなエラーにあった。nodeのバージョン下げて記事のコマンド打ったら何とかなった
@@ -19,6 +21,8 @@ composer install
 // sailを利用したコンテナ立ち上げ
 // 参照URL：https://readouble.com/laravel/9.x/ja/sail.html
 ./vendor/bin/sail up -d
+./vendor/bin/sail npm install
+./vendor/bin/sail composer install
 ./vendor/bin/sail php artisan migrate
 ./vendor/bin/sail npm run dev
 ```
