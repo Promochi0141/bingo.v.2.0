@@ -24,6 +24,8 @@ $ composer install
 # エイリアス化（今のコンソールを抜けるとリセットされる）
 $ alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
+# sail ~ でコンテナ内に直接命令を送れる
+
 $ sail up -d
 $ sail npm install
 $ sail composer install
@@ -37,11 +39,11 @@ $ sail npm run dev
 
 # 認証について
 `database/migrations/2014_10_12_000000_create_users_table`で変更可能
-`./vendor/bin/sail php artisan migrate:fresh`で初めて変更が反映される。
+`sail php artisan migrate:fresh`で初めて変更が反映される。
 register用のルーティングは消してあるので、ブラウザを通じて管理者登録はできない。
 
 デフォルト値は
-```
+```php
 'name' => 'your_name',
 'email' => 'your_email@test.com',
 'password' => Hash::make('your_password'),
