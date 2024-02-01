@@ -7,7 +7,7 @@ const NavHomepage = () => {
         <div>
             <h2 className="cursor-pointer">
                 <a href="https://nodaridaisai.com/2023/" className="text-gray-500">
-                    2024年理大祭
+                    2024年理大祭　前夜祭ビンゴ
                 </a>
             </h2>
         </div>

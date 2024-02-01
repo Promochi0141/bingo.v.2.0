@@ -25,10 +25,10 @@ const ShowNumbers = () => {
 
     return (
         <React.Fragment>
-            <div className="text-white border-white-2 border mx-1 mb-1 px-1 pb-4">
+            <div className="text-white border-white-2 border mx-1 mb-1 px-1 pb-4 bg-gray-800">
                 <div className='flex justify-between items-center text-right px-2 pt-4 pb-12'>
-                    <h1 className='text-xl m-2 bg-white text-black px-5 py-2 text-center font-bold'>一覧</h1>
-                    <button onClick={fetchNumbers} className='p-2 border border-white-1 bg-blue-600 hover:bg-blue-900'>
+                    <h1 className='text-xl m-2 bg-white text-black px-5 py-2 text-center font-bold'>履歴</h1>
+                    <button onClick={fetchNumbers} className='p-2 border border-white-1 bg-blue-600 hover:bg-blue-900 bomb'>
                         <FontAwesomeIcon icon={faSync} /> 最新の情報に更新
                     </button>
                 </div>
