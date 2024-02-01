@@ -12,9 +12,6 @@ const VisitorFooter = () => {
                     ページ上部へ
                 </button>
             </div>
-            <div className="flex items-center justify-center my-2">
-                <a href="#" className='border-b border-black'>プライバシーポリシー</a>
-            </div>
             <div className="flex justify-center items-center pt-2">
                 <a href="#">
                     <div className="rounded-full mx-2 bg-blue-500 text-white w-10 h-10 flex justify-center items-center">
@@ -31,6 +28,9 @@ const VisitorFooter = () => {
                         <FontAwesomeIcon icon={faYoutube} />
                     </div>
                 </a>
+            </div>
+            <div className="flex items-center justify-center mt-4">
+                <a href="#" className='border-b border-black'>プライバシーポリシー</a>
             </div>
         </footer>
     );

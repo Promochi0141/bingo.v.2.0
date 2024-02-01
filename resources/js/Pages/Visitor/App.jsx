@@ -7,7 +7,7 @@ const App = () => {
     return (
         <React.Fragment>
             <VisitorHeader />
-            <main className="bg-black p-4">
+            <main className="bg-black px-1.5 py-4">
                 <ShowNumbers />
             </main>
             <VisitorFooter />

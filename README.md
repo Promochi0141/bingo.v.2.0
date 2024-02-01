@@ -50,4 +50,7 @@ register用のルーティングは消してあるので、ブラウザを通じ
 ```
 
 # ルーティングについて
-`localhost/`に来場客用のページを、`localhost/admin`に管理者用ページを配置する予定
+`localhost/`に来場客用のページを、`localhost/admin`に管理者用ページを配置
+
+# 年度、リンクの書き換え
+`localhost/`のリンクなどの編集は`resources/js/Components/NavHomepage.jsx`と`resources/js/Layouts/VisitorFooter.jsx`に対して行って下さい。
