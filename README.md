@@ -10,21 +10,29 @@ https://stackoverflow.com/questions/74726224/opensslerrorstack-error03000086digi
 
 
 ### 具体的なコマンド
-```
-// このリポジトリをクローン
-// このリポジトリをクローンした場所にカレントディレクトリを移動
+```bash
+# このリポジトリをクローン
+# このリポジトリをクローンした場所にカレントディレクトリを移動
 
-// 必要なパッケージをインストール
-npm install
-composer install
+# 必要なパッケージをインストール
+$ npm install
+$ composer install
 
-// sailを利用したコンテナ立ち上げ
-// 参照URL：https://readouble.com/laravel/9.x/ja/sail.html
-./vendor/bin/sail up -d
-./vendor/bin/sail npm install
-./vendor/bin/sail composer install
-./vendor/bin/sail php artisan migrate
-./vendor/bin/sail npm run dev
+# sailを利用したコンテナ立ち上げ
+# 参照URL：https://readouble.com/laravel/9.x/ja/sail.html
+
+# エイリアス化（今のコンソールを抜けるとリセットされる）
+$ alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+
+$ sail up -d
+$ sail npm install
+$ sail composer install
+$ sail cp .env.example .env
+$ sail php artisan key:generate
+$ sail php artisan migrate
+$ sail npm run dev
+
+# 終了させたいときはCtrl+Cとsail down
 ```
 
 # 認証について
