@@ -23,9 +23,9 @@ return new class extends Migration
 
         //管理用ユーザーを作成　※必要に応じて変更してください
         DB::table('users')->insert([
-            'name' => 'your_name',
-            'email' => 'your_email@test.com',
-            'password' => Hash::make('your_password'),
+            'name' => 'hiro4bbh',
+            'email' => 'detakihero20noon@gmail.com',
+            'password' => Hash::make('milmil_t0m1ta'),
         ]);
     }
 
